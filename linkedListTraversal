@@ -1,0 +1,63 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// C++ program for traversal of a linked list
+
+#include <iostream>
+using namespace std;
+class Node{
+	public:
+		int data;
+		Node* next;
+};
+
+void linkedListTraversal(Node* ptr)
+{
+	while(ptr != NULL)
+	{
+		cout << ptr->data << " ";
+		ptr = ptr->next;
+	}
+}
+
+// Driver's code
+
+int main()
+{
+	Node* head = NULL;
+	Node* second = NULL;
+	Node* third = NULL;
+	Node* fourth = NULL;
+	Node* fifth = NULL;
+	
+	// Allocate 5 nodes in the heap
+	
+	head = new Node();
+	second = new Node();
+	third = new Node();
+	fourth = new Node();
+	fifth = new Node();
+	
+	head-> data = 1; // Assign data to the first node
+	head->next = second; // Link first node with second node
+	
+	second-> data = 2; // Assign data to the second node
+	second->next = third; // Link second node with third node
+	
+	third-> data = 3; // Assign data to the third node
+	third-> next = fourth; // Link third node with fourth node
+	
+	fourth-> data = 4; // Assign data to the fourth node
+	fourth-> next = fifth; // Link fourth node with fifth node
+	
+	fifth-> data = 5; // Assign data to the fifth node
+	fifth-> next = NULL; // And the third node is assign with NULL which indicate that the liked list is terminated here
+	
+	
+	// Function call
+	
+	linkedListTraversal(head);
+	
+	return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
